@@ -1,6 +1,9 @@
 #include <iostream>
 #include "LinkedList.h"
 #include "CircularLinkedList.h"
+#include "BTree.h"
+
+using namespace std;
 
 void TestLinkedList()
 {
@@ -47,12 +50,34 @@ void TestCircularLinkedList()
 	clinkedlist.PrintNode();
 }
 
+void TestBTree() 
+{
+	BTree btree;
+
+	btree.InsertNode(10);
+	btree.InsertNode(5);
+	btree.InsertNode(1);
+	btree.InsertNode(7);
+	btree.InsertNode(9);
+	btree.InsertNode(4);
+	btree.InsertNode(2);
+
+	cout << "Preorder" << endl;
+	btree.Preorder(btree.GetRoot());
+	cout << endl;
+	cout << "Inorder" << endl;
+	btree.Inorder(btree.GetRoot());
+	cout << endl;
+	cout << "Postorder" << endl;
+	btree.Postorder(btree.GetRoot());
+}
 
 int main()
 {
 	//TestLinkedList();
+	//TestCircularLinkedList();
 
-	TestCircularLinkedList();
+	TestBTree();
 
 	return 0;
 }
