@@ -3,8 +3,6 @@
 
 using namespace std;
 
-hahaha
-
 BNode* BTree::CreateNode(int value)
 {
 	BNode* newNode = new BNode();
