@@ -3,6 +3,7 @@
 
 using namespace std;
 
+hahaha
 
 BNode* BTree::CreateNode(int value)
 {
